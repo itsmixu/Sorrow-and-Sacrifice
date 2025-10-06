@@ -69,7 +69,8 @@ public class NPC : MonoBehaviour
         if (item == flower)
         {
             AudioManager.Instance.PlayMusic("Sacrifice");
-            Instantiate(gameObject, graveSpot.transform.position, graveSpot.transform.rotation);
+            Instantiate(gameObject, transform.position, transform.rotation); //copy itself
+            transform. position = graveSpot.transform.position; // move itself to the graveyard
             sacrifice = gameObject.name;
             DialogueManager.Instance.ShowDialogue(flowerDialogue);
         }
