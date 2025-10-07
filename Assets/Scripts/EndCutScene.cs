@@ -130,6 +130,7 @@ public class EndCutScene : MonoBehaviour
 
             DialogueManager.Instance.ShowDialogue(end3StayDialogue3);
             yield return new WaitUntil(() => DialogueManager.Instance.isDialogueActive == false);
+            
             //end screen?
 
         }
@@ -137,6 +138,7 @@ public class EndCutScene : MonoBehaviour
         {
             Debug.Log("Leaving");
             DialogueManager.Instance.ShowDialogue(end3LeaveDialogue);
+            yield return new WaitUntil(() => DialogueManager.Instance.isDialogueActive == false);
             ScreenFlash.Instance.FadeIn(Color.black, 3f);
         }
     }

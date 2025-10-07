@@ -79,14 +79,15 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    EndDialogue();
+                    StartCoroutine(EndDialogue());
                 }
             }
         }
     }
 
-    private void EndDialogue()
+    private IEnumerator EndDialogue()
     {
+        yield return new WaitForSeconds(0.1f);
         dialoguePanel.SetActive(false);
         isDialogueActive = false;
         typingCoroutine = null;

@@ -50,7 +50,8 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!active && Input.GetKey(KeyCode.E))
+        Debug.Log(DialogueManager.Instance.isDialogueActive);
+        if (Input.GetKey(KeyCode.E) && DialogueManager.Instance.isDialogueActive == false)
         {
             Interact();
             active = true;

@@ -151,7 +151,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -938,15 +938,17 @@ MonoBehaviour:
     you\u2019re only going to be wasting my time, get out of here."
   end3dialogue:
   - "Daisy: What are we doing here? It\u2019s dinnertime soon, can we go home?"
-  - "You: No, let\u2019s wait just a minute more."
-  - 'Daisy: ...Okay.'
+  end3StayDialogue1:
+  - 'You: No, let''s just wait a minute more,'
+  - 'Daisy: ...Okay'
+  end3StayDialogue2:
   - "Phantom: Ahh, I see you found the right sacrifice. Just one ritual, and you\u2019ll
     have your darling back."
-  - "Daisy: What\u2019s going on?"
-  end3StayDialogue1: []
-  end3StayDialogue2: []
-  end3StayDialogue3: []
-  end3LeaveDialogue: []
+  - 'Daisy: What''s going on?'
+  end3StayDialogue3:
+  - 'Phantom: Good choice. Enjoy your life with your newly resurrected wife.'
+  end3LeaveDialogue:
+  - "You: Yeah, let\u2019s just go. I\u2019ll bring you home."
 --- !u!61 &103583524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1576,63 +1578,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 829040279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &201005111
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1811384197395189178, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_Name
-      value: Flower
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.466
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.454
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567937039424415171, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 638009c5ca94f6f4abea200c277445d2, type: 3}
 --- !u!1 &233552366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,11 +2549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: baebe65222ae208449b37707b1698c65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.61
+      value: 22.56
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: baebe65222ae208449b37707b1698c65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6299999
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: baebe65222ae208449b37707b1698c65, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2709,7 +2654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3377,7 +3322,7 @@ MonoBehaviour:
     ScreenPosition: {x: 0, y: 0}
     DeadZone:
       Enabled: 1
-      Size: {x: 0.2, y: 0.3}
+      Size: {x: 0.18, y: 0.12}
     HardLimits:
       Enabled: 0
       Size: {x: 1.68, y: 0.8}
@@ -5370,7 +5315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a3a852771115b458415764720f3f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 5
+  speed: 4
 --- !u!61 &918850044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5429,7 +5374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d09da53b8feac4b975b687eed28efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  items: []
+  items:
+  - {fileID: 11400000, guid: 516d0e71a16425a4295c2295fd09d706, type: 2}
 --- !u!95 &918850046
 Animator:
   serializedVersion: 7
@@ -6922,8 +6868,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1544580752434385045, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: 'firstDialogue.Array.data[0]'
-      value: 'Robin: There have been many accidents during the last few years. It
-        sometimes feels like our town is haunted!'
+      value: "Robin: There have been many accidents during the last few years. It
+        sometimes feels like our town is haunted! And one of those little girls constantly
+        playing that creepy tone with her kazoo definitely doesn\u2019t help."
       objectReference: {fileID: 0}
     - target: {fileID: 1544580752434385045, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: 'firstDialogue.Array.data[1]'
@@ -6983,11 +6930,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7793063657786313001, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.29
+      value: -18.07
       objectReference: {fileID: 0}
     - target: {fileID: 7793063657786313001, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.07
+      value: -5.13
       objectReference: {fileID: 0}
     - target: {fileID: 7793063657786313001, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30452,8 +30399,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.5
-  m_fontSizeBase: 33.5
+  m_fontSize: 38.32
+  m_fontSizeBase: 38.32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 30
@@ -30615,14 +30562,15 @@ GameObject:
   - component: {fileID: 1448530421}
   - component: {fileID: 1448530423}
   - component: {fileID: 1448530422}
+  - component: {fileID: 1448530425}
   - component: {fileID: 1448530424}
   m_Layer: 5
-  m_Name: Character sheets
+  m_Name: Character Sheet List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1448530421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30639,7 +30587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95, y: 0}
+  m_AnchoredPosition: {x: 54.5, y: 0}
   m_SizeDelta: {x: 109, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448530422
@@ -30700,10 +30648,24 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 100, y: 77}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 1
+  m_Constraint: 2
   m_ConstraintCount: 14
+--- !u!114 &1448530425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448530420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e91cedc4a0abca479ee6b7de3760838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSheetList
+  Instance: {fileID: 0}
+  charSheetPrefab: {fileID: 6104486157176150860, guid: 7399cd18bf87a3348a584285416d5ae9, type: 3}
 --- !u!1 &1559124866
 GameObject:
   m_ObjectHideFlags: 0
@@ -35904,7 +35866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 167}
-  m_SizeDelta: {x: 691, y: 190}
+  m_SizeDelta: {x: 869.3187, y: 225.6638}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621324169
 MonoBehaviour:
@@ -36778,8 +36740,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.5
-  m_fontSizeBase: 33.5
+  m_fontSize: 38.32
+  m_fontSizeBase: 38.32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 30
@@ -36934,11 +36896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: 6eb1ed2cb299cd14bb9c497f704912a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.84
+      value: 15.09
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: 6eb1ed2cb299cd14bb9c497f704912a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.81
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 6567937039424415171, guid: 6eb1ed2cb299cd14bb9c497f704912a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56243,8 +56205,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1544580752434385045, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: 'firstDialogue.Array.data[0]'
-      value: 'Jerald: Dude, Ignatius is such a cool dude. He helped me fix my motorcycle
-        yesterday. I never knew he was such a good mechanic!'
+      value: "Jerald: My friends are having a picnic right now, but they forgot the
+        cake. I\u2019m sure they\u2019d be grateful if someone brought them one."
       objectReference: {fileID: 0}
     - target: {fileID: 1544580752434385045, guid: ca34a28cddbe3804fb5737efa4aabb17, type: 3}
       propertyPath: 'firstDialogue.Array.data[1]'
@@ -56361,7 +56323,6 @@ SceneRoots:
   - {fileID: 1236674445}
   - {fileID: 619394802}
   - {fileID: 918850041}
-  - {fileID: 201005111}
   - {fileID: 1237145156}
   - {fileID: 829040279}
   - {fileID: 103583522}

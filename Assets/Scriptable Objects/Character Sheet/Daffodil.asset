@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05beef8e3200cef498077b3aed1ee65c, type: 3}
   m_Name: Daffodil
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSheet
-  name: Daffodil
-  image: {fileID: 0}
+  name: {fileID: -8338120769250871428, guid: 93e0b88b747ed1f46a37cbaae241337b, type: 3}
+  image: {fileID: -2284064086660261931, guid: 93e0b88b747ed1f46a37cbaae241337b, type: 3}

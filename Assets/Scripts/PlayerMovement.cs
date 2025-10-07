@@ -36,47 +36,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (input != Vector2.zero)
         {
-            // Moving on the x-axis and down
-            if (input.x != 0 && input.y < 0)
+            // Downwards facing animations
+            if (input.y <= 0)
             {
-                lastYDirection = Direction.Down;
-
                 if (input.x > 0)
                 {
                     animator.Play("WalkRight");
-                    lastXDirection = Direction.Right;
                 }
+
                 else if (input.x < 0)
                 {
                     animator.Play("WalkLeft");
-                    lastXDirection = Direction.Left;
                 }
-            }
 
-            // Moving on the x-axis and up
-            else if (input.x != 0 && input.y > 0)
-            {
-                lastYDirection = Direction.Up;
-
-                if (input.x > 0)
+                else if (input.x == 0)
                 {
-                    animator.Play("WalkUpR");
-                    lastXDirection = Direction.Right;
-                }
-                else if (input.x < 0)
-                {
-                    animator.Play("WalkUpL");
-                    lastXDirection = Direction.Left;
-                }
-            }
-
-            // If not moving on x-axis
-            else if (input.x == 0)
-            {
-                if (input.y < 0)
-                {
-                    lastYDirection = Direction.Down;
-
                     switch (lastXDirection)
                     {
                         case Direction.Right:
@@ -87,15 +61,27 @@ public class PlayerMovement : MonoBehaviour
                             break;
                     }
                 }
+            }
 
-                else if (input.y > 0)
+            // Up-animations
+            else if (input.y > 0)
+            {
+                if (input.x > 0)
                 {
-                    lastYDirection = Direction.Up;
+                    animator.Play("WaulkUpR");
+                }
 
+                else if (input.x < 0)
+                {
+                    animator.Play("WalkUpL");
+                }
+
+                else if (input.x == 0)
+                {
                     switch (lastXDirection)
                     {
                         case Direction.Right:
-                            animator.Play("WalkUpR");
+                            animator.Play("WaulkUpR");
                             break;
                         case Direction.Left:
                             animator.Play("WalkUpL");
@@ -103,7 +89,13 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
+
+            if (input.y < 0) lastYDirection = Direction.Down;
+            if (input.y > 0) lastYDirection = Direction.Up;
+            if (input.x < 0) lastXDirection = Direction.Left;
+            if (input.x > 0) lastXDirection = Direction.Right;
         }
+
         else
         {
             // Idle animation
