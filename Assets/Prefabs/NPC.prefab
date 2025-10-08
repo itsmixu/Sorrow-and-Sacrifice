@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8375587492601856175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 1}
+  m_LocalPosition: {x: 0, y: 2.047, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   exclamation: {fileID: 8375587492601856175}
   flower: {fileID: 11400000, guid: 516d0e71a16425a4295c2295fd09d706, type: 2}
+  charSheet: {fileID: 0}
   graveSpot: {fileID: 0}
   firstDialogue: []
   flowerDialogue:

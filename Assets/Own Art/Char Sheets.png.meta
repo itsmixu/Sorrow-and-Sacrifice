@@ -457,9 +457,9 @@ TextureImporter:
       name: CharSheet
       rect:
         serializedVersion: 2
-        x: 76
+        x: 93
         y: 119
-        width: 111
+        width: 94
         height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

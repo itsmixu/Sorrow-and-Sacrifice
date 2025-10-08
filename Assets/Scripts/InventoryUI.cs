@@ -64,7 +64,6 @@ public class InventoryUI : MonoBehaviour
             {
                 PlayerInteraction.Instance.currentNPC.ReceiveItem(itemToGive);
                 playerInventory.RemoveItem(itemToGive);
-                //UpdateUI();
                 Debug.Log("Gave " + itemToGive.itemName + " to NPC " + PlayerInteraction.Instance.currentNPC.name);
             }
             else

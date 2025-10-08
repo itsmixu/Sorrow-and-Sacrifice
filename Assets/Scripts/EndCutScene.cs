@@ -123,7 +123,7 @@ public class EndCutScene : MonoBehaviour
             DialogueManager.Instance.ShowDialogue(end3StayDialogue2);
             yield return new WaitUntil(() => DialogueManager.Instance.isDialogueActive == false);
 
-            daisyAnim.SetTrigger("Pop");
+            daisyAnim.Play("DaisyPop");
             AudioManager.Instance.PlaySFX("Pop");
 
             yield return new WaitForSeconds(3f);

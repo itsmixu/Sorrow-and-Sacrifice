@@ -8,9 +8,11 @@ public class NPC : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject exclamation;
     [SerializeField] private ItemData flower;
+    [SerializeField] private CharacterSheet charSheet;
     [SerializeField] private GameObject graveSpot;
 
     [Header("Dialogue")]
+    [SerializeField] private bool isDaisy = false;
     [TextArea]
     [SerializeField] private string[] firstDialogue;
     [SerializeField] private string[] flowerDialogue;
@@ -27,15 +29,17 @@ public class NPC : MonoBehaviour
     [SerializeField] private bool dropAlways = false;
     [SerializeField] private GameObject itemDrop = null;
 
+    private Animator animator;
+
     private void Awake()
     {
         if (itemDrop != null)
         {
             itemDrop.SetActive(false);
         }
+        animator = GetComponent<Animator>();
     }
 
-    private bool active = false;
     [HideInInspector] public bool playerNearby = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,16 +49,14 @@ public class NPC : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         exclamation.SetActive(false);
-        active = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(DialogueManager.Instance.isDialogueActive);
         if (Input.GetKey(KeyCode.E) && DialogueManager.Instance.isDialogueActive == false)
         {
             Interact();
-            active = true;
+            CharacterSheetList.Instance.AddToList(charSheet);
         }
     }
 
@@ -80,6 +82,11 @@ public class NPC : MonoBehaviour
             if (item == wantedItem)
             {
                 DialogueManager.Instance.ShowDialogue(correctItemDialogue);
+                if (isDaisy)
+                {
+                    animator.Play("DaisyKazoo");
+                    AudioManager.Instance.PlaySFX("Kazoo");
+                }
 
                 if (itemDrop != null && requireCorrectItem == true)
                 {
