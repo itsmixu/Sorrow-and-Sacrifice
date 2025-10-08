@@ -50,8 +50,10 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = true;
         canAdvance = false;
         dialoguePanel.SetActive(true);
+        PlayerMovement.Instance.canMove = false;
         StartTypingLine();
         StartCoroutine(EnableAdvanceNextFrame());
+
     }
 
     private IEnumerator EnableAdvanceNextFrame()
@@ -91,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         isDialogueActive = false;
         typingCoroutine = null;
+        PlayerMovement.Instance.canMove = true;
     }
 }
 

@@ -37,11 +37,12 @@ public class IntroCutScene : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         ScreenFlash.Instance.FadeIn(Color.black, 2f);
-        AudioManager.Instance.PlayMusic("Background");
         yield return new WaitForSeconds(2f);
         InventoryUI.SetActive(true);
         graveyardCam.enabled = false;
+        AudioManager.Instance.PlayMusic("Background");
         yield return new WaitForSeconds(1f);
         ScreenFlash.Instance.FadeOut(Color.black, 1f);
+        PlayerMovement.Instance.canMove = true;
     }
 }

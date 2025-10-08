@@ -29,11 +29,14 @@ public class CharSheetPopup : MonoBehaviour
         image.sprite = item.name;
         popup.SetActive(true);
         lastSheet = item;
+        PlayerMovement.Instance.canMove = false;
     }
 
 
     public void ClosePopup()
     {
         popup.SetActive(false);
+        PlayerMovement.Instance.canMove = true;
+
     }
 }

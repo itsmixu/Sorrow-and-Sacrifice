@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05beef8e3200cef498077b3aed1ee65c, type: 3}
   m_Name: Christina
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSheet
-  name: {fileID: 0}
+  name: {fileID: -7604842743651839856, guid: ec542fdd95b81174eb9cfdbc0b8ad71e, type: 3}
   image: {fileID: -4414191568254295843, guid: 93e0b88b747ed1f46a37cbaae241337b, type: 3}
+  note: chris

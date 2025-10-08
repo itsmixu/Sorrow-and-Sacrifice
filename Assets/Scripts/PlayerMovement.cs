@@ -1,8 +1,13 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [SerializeField] float speed = 0.5f;
+    [SerializeField] private CinemachineCamera graveyardCam;
+    public bool canMove = false;
     private Rigidbody2D rb;
     private Vector2 input;
 
@@ -11,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private Direction lastYDirection = Direction.Down;
     private Direction lastXDirection = Direction.Right;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,8 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        if (canMove && graveyardCam.enabled == false)
+        {
+            input.x = Input.GetAxisRaw("Horizontal");
+            input.y = Input.GetAxisRaw("Vertical");
+        }
         input.Normalize();
 
         UpdateAnimation();
