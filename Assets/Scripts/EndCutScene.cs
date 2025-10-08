@@ -129,12 +129,9 @@ public class EndCutScene : MonoBehaviour
         DialogueManager.Instance.ShowDialogue(end2dialogue);
         yield return new WaitUntil(() => DialogueManager.Instance.isDialogueActive == false);
         ScreenFlash.Instance.FadeIn(Color.white, 0.2f);
-        yield return new WaitForSeconds(0.5f);
-        ScreenFlash.Instance.FadeIn(Color.black, 1f, 1f);
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(3f);
         EndScreen.Instance.ShowEndScreen(endText2, false);
-        ScreenFlash.Instance.FadeOut(Color.black, 3f);
+        ScreenFlash.Instance.FadeOut(Color.white, 3f);
     }
 
     IEnumerator Ending3() // END 3, player brings DAISY
