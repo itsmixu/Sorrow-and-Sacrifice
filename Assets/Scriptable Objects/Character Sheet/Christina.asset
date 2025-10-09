@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSheet
   name: {fileID: -7604842743651839856, guid: ec542fdd95b81174eb9cfdbc0b8ad71e, type: 3}
   image: {fileID: -4414191568254295843, guid: 93e0b88b747ed1f46a37cbaae241337b, type: 3}
-  note: chris
+  note: 

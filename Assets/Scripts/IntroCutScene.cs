@@ -8,6 +8,7 @@ public class IntroCutScene : MonoBehaviour
     [SerializeField] private CinemachineCamera graveyardCam;
     [SerializeField] private GameObject ghost;
     [SerializeField] private GameObject InventoryUI;
+    [SerializeField] private GameObject tutorialPopup;
     [Header("Dialogue")]
     [SerializeField] private string[] startDialogue;
     [SerializeField] private string[] ghostDialogue;
@@ -40,9 +41,9 @@ public class IntroCutScene : MonoBehaviour
         yield return new WaitForSeconds(2f);
         InventoryUI.SetActive(true);
         graveyardCam.enabled = false;
+        tutorialPopup.SetActive(true);
         AudioManager.Instance.PlayMusic("Background");
         yield return new WaitForSeconds(1f);
         ScreenFlash.Instance.FadeOut(Color.black, 1f);
-        PlayerMovement.Instance.canMove = true;
     }
 }

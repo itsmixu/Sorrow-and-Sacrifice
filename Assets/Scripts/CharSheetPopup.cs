@@ -37,6 +37,5 @@ public class CharSheetPopup : MonoBehaviour
     {
         popup.SetActive(false);
         PlayerMovement.Instance.canMove = true;
-
     }
 }

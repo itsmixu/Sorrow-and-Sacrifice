@@ -7,6 +7,7 @@ public class CharacterSheetList : MonoBehaviour
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject charSheetPrefab;
+    [SerializeField] private GameObject canvas;
 
     public List<CharacterSheet> itemsList = new();
 
@@ -19,11 +20,11 @@ public class CharacterSheetList : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(canvas);
         }
     }
 
